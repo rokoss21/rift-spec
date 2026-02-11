@@ -1,0 +1,63 @@
+# Operating System
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# Editors
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-*
+.project
+.settings/
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+*.cache
+
+# Build outputs (if any)
+build/
+dist/
+*.pdf
+*.html
+
+# Documentation build artifacts
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Windows
+desktop.ini
+
+# Linux
+.directory
+
+# Node (if using markdown tools)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Python (if using doc generation tools)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+ENV/
+
+# Markdown previews
+*.md.html
