@@ -4,6 +4,8 @@
 [![Version](https://img.shields.io/badge/Version-1.0--RC1-blue.svg)](https://github.com/rokoss21/rift-spec/blob/main/RIFT-SPEC-RC1.md)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+![RIFT Protocol Preview](assets/preview.png)
+
 > **RIFT**: Realtime Interactive Fast Transport — A next-generation transport protocol for real-time communications (VoIP, video, collaboration) designed for mobile-first, multipath-native, and censorship-resistant environments.
 
 ## 📋 Overview
@@ -132,6 +134,12 @@ Two independent implementations MUST be able to:
 4. **Security**: Noise Protocol Framework, PFS, AEAD, Header Protection
 5. **Observability**: RTT/loss/jitter metrics without decrypting payload
 6. **Anti-Ossification**: Greasing, reserved bits, extensible frame types
+
+### How RIFT Works
+
+![RIFT Protocol Architecture](assets/infographic.png)
+
+The diagram above illustrates the complete RIFT protocol stack, from UDP datagram handling through cryptographic protection, multipath management, QoS scheduling, and application-level streams/datagrams.
 
 ---
 
