@@ -20,6 +20,12 @@ RIFT is designed to address the limitations of traditional transport protocols (
 - ✅ **Built-in QoS scheduler** with programmable priority policies
 - ✅ **Censorship-resistant** extensions (obfuscation, relay, fallback transports)
 
+### Mobile-First: Seamless Network Handover
+
+![Multipath Handover](assets/mobile-first.png)
+
+RIFT's multipath capabilities enable seamless transitions between network interfaces (Wi-Fi ↔ LTE) without connection drops. The protocol validates multiple paths simultaneously and performs instant failover when the active path degrades, ensuring uninterrupted real-time communication.
+
 ---
 
 ## 📖 Specification Documents
@@ -76,6 +82,12 @@ RIFT introduces several novel approaches:
 - ✅ **QoS Scheduler**: 4 priority classes (P0-P3) with deadline support
 - ✅ **Forward Error Correction**: XOR and Reed-Solomon FEC
 
+#### QoS Priority Scheduler
+
+![QoS Scheduler](assets/QoS-Scheduler.png)
+
+RIFT's built-in QoS scheduler manages four priority classes (P0-P3) with deadline-aware packet handling. P0 (audio/signaling) receives highest priority with aggressive dropping of stale packets, while P1 (video) uses adaptive FEC. P2/P3 handle interactive and bulk data with anti-starvation guarantees, ensuring fair bandwidth allocation even under congestion.
+
 ### v2.x Anti-Censorship Extensions
 - 🔐 **Obfuscation**: obfs4, TLS-mimic, ShadowSocks transforms
 - 🌐 **Relay Infrastructure**: Single-hop and multi-hop forwarding
@@ -110,6 +122,12 @@ Two independent implementations MUST be able to:
 - [x] Perform multipath operations
 - [x] Apply Header Protection correctly
 - [x] Construct AEAD nonces correctly
+
+### Cryptographic Handshake Flow
+
+![RIFT Handshake](assets/Handshake.png)
+
+RIFT uses the Noise IK pattern for its cryptographic handshake, providing 0-RTT capability with Perfect Forward Secrecy. The handshake progresses through three independent packet number spaces (INITIAL, HANDSHAKE, 1-RTT), each with its own cryptographic protection level and ACK tracking.
 
 ---
 
